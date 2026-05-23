@@ -1,0 +1,6 @@
+{
+  "name": "Hamido Teck Portfolio",
+  "description": "Elite modern personal portfolio website and luxury digital studio featuring interactive real-time simulators of bespoke SaaS dashboards, logistics portals, restaurants, and agencies.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

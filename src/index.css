@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-luxury-bg: #050505;
+  --color-luxury-card: rgba(15, 15, 15, 0.7);
+  --color-luxury-accent: #F2F2F2;
+  --color-luxury-gold: #22d3ee;
+}
+
+/* Custom Text Outline utility for Artistic Flair design script */
+.text-stroke-white {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.84);
+}
+
+.text-stroke-cyan {
+  -webkit-text-stroke: 1px rgba(34, 211, 238, 0.84);
+}
+
+/* Base resets & Cinematic Scrollbars */
+html {
+  scroll-behavior: smooth;
+  background-color: #050505;
+  color: #F2F2F2;
+  font-family: var(--font-sans);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #22d3ee20;
+  border-radius: 999px;
+  border: 1px solid #050505;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #22d3ee40;
+}
+
+/* Glassmorphism Components */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(18, 18, 18, 0.65);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.5), 0 0 20px 2px rgba(255, 255, 255, 0.01);
+  transform: translateY(-2px);
+}
+
+/* Interactive custom radial lighting glows */
+.glow-spotlight {
+  background: radial-gradient(600px circle at var(--x, 0px) var(--y, 0px), rgba(255, 255, 255, 0.06), transparent 40%);
+}
+
+.silver-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 50%, #e4e4e7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f8fafc 0%, #cbd5e1 60%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Loading animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.05);
+  }
+}
+
+.animated-glow {
+  animation: pulseGlow 8s infinite ease-in-out;
+}
